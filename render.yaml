@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: telegram-bot-php
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: DATABASE_URL
+        sync: false
